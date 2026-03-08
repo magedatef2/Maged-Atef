@@ -1,7 +1,7 @@
 {
-  "log": { "loglevel": "info" },
+  "log": { "loglevel": "none" },
   "inbounds": [{
-    "port": 7860,
+    "port": 80,
     "protocol": "vless",
     "settings": {
       "clients": [{"id": "97b69651-46c5-4d0f-8c3b-513689269432"}],
@@ -12,5 +12,8 @@
       "wsSettings": { "path": "/maged-net" }
     }
   }],
-  "outbounds": [{ "protocol": "freedom" }]
+  "outbounds": [{ "protocol": "freedom" }],
+  "transport": {
+    "mux": { "enabled": true, "concurrency": 8 }
+  }
 }
