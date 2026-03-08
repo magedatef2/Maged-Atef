@@ -1,0 +1,16 @@
+{
+  "log": { "loglevel": "info" },
+  "inbounds": [{
+    "port": 7860,
+    "protocol": "vless",
+    "settings": {
+      "clients": [{"id": "97b69651-46c5-4d0f-8c3b-513689269432"}],
+      "decryption": "none"
+    },
+    "streamSettings": {
+      "network": "ws",
+      "wsSettings": { "path": "/maged-net" }
+    }
+  }],
+  "outbounds": [{ "protocol": "freedom" }]
+}
