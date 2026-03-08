@@ -1,0 +1,11 @@
+{
+  "inbounds": [{
+    "port": 10000,
+    "protocol": "vmess",
+    "settings": {
+      "clients": [{ "id": "b8313320-c022-4943-94df-69e160523e3e" }]
+    },
+    "streamSettings": { "network": "ws" }
+  }],
+  "outbounds": [{ "protocol": "freedom" }]
+}
