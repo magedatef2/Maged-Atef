@@ -9,11 +9,23 @@
     },
     "streamSettings": {
       "network": "ws",
-      "wsSettings": { "path": "/maged-net" }
-    }
+      "wsSettings": { 
+        "path": "/maged-net",
+        "headers": { "Host": "magedatef-maged-server.hf.space" }
+      }
+    },
+    "sniffing": { "enabled": true, "destOverride": ["http", "tls"] }
   }],
-  "outbounds": [{ "protocol": "freedom" }],
+  "outbounds": [
+    { 
+      "protocol": "freedom", 
+      "settings": { "domainStrategy": "UseIP" } 
+    }
+  ],
   "transport": {
-    "mux": { "enabled": true, "concurrency": 8 }
+    "mux": { 
+      "enabled": true, 
+      "concurrency": 16 
+    }
   }
 }
